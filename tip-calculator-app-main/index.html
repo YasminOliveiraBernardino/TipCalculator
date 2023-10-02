@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <script src="function.js"></script>
+  <title>Tip calculator app</title>
+
+</head>
+<body>
+  <header>
+    <img src="images/logo.svg" alt="" draggable="false">
+  </header>
+
+  <form id="form">
+    <div class="mainContainer">
+      <div class="form_part">
+        <label for="dolar">Bill</label>
+        <input type="number" placeholder="0" required min="0" max="100000"  id="dolar" class="input_style">
+      </div>
+      <div class="form_part">
+        <label for="tipPerc">Select Tip %</label>
+        <div>
+          <div class="percentage">
+            <input class="button" type="button" value="5%" id="add5">
+            <input class="button" type="button" value="10%" id="add10">
+            <input class="button" type="button" value="15%" id="add15">
+          </div>
+          <div class="percentage">
+            <input class="button" type="button" value="25%" id="add25">
+            <input class="button" type="button" value="50%" id="add50">
+            <input id="tipPerc" class="customize" type="number" placeholder="Custom" min="0" max="100">
+          </div>
+        </div>
+      </div>
+      <div class="form_part">
+        <label for="people">Number of People</label>
+        <input class="input_style" type="number" id="people" placeholder="0" required  min="0" max="100000">
+      </div>
+    </div>
+    <div class="greenContainer">
+      <div>
+        <div class="amount">
+          <div>
+            <p>Tip Amount</p>
+            <span>/ person</span>
+          </div>
+          <div>
+            <h2  id="tipAmount">
+              $0.00
+            </h2>
+          </div>
+        </div>
+        <div class="amount">
+          <div>
+            <p>Total</p>
+            <span>/ person</span>
+          </div>
+          <div>
+            <h2 id="totalAmount">
+              $0.00
+            </h2>
+          </div>
+        </div>
+      </div>
+      <input type="button" value="calculate" onclick="calc()" class="reset_button">
+      
+    </div>
+  </form>
+
+</body>
+</html>
